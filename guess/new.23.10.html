@@ -5,31 +5,91 @@
         
         <title>Guess</title>
         <style>
-			
+			/* global reset */
+            html, body, body div, div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, img, s, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, button, form, fieldset, article, aside, footer, header, main, nav, section, input, textarea, select, option {
+                margin: 0;
+                padding: 0;
+                border: none;
+                outline: none;
+                background: none;
+            }
+            html * {
+                max-height: 1000000px;
+            }
+            h1, h2 {
+                padding: 20px;
+                text-align: center;
+            }
+            body {
+                background-image: url('kartinka-s-chislami.jpg');
+                background-size: cover;
+            }
+            .container {
+                border: 15px solid rgb(166 105 143);
+                border-style: ridge;
+                width: max-content;
+                margin: 100px auto;
+                background-color: #ece9ed;
+                padding: 20px;
+            }
+            button {
+                cursor: pointer;
+                border: 3px solid rgb(131, 117, 126);
+                background: rgb(213, 206, 206);
+                width: 150px;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                margin: 20px auto;
+            }
+            #enter_field {
+                border: 3px solid rgb(131, 117, 126);
+                width: 50px;
+                height: 40px;
+                font-size: 20px;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                margin: 10px;
+            }
+            #congrats {
+                font-size: x-large;
+                font-style: italic;
+                color: blueviolet;
+            }
+            #count_field {
+                font-size: x-large;
+                color: rgb(220, 24, 158);
+            }
+            #more_less_text {
+                font-weight: bold;
+                font-size: large;
+            }
 		</style>
         
     </head>
     
     <body>
-        <h1>Игра: Угадай число</h1>
-		<div id="first_window">
-            <h2>Для начала игры нажмите кнопку</h2>
-            <button type="button" id="start_button">Начать игру</button>
-            <p id="congrats"></p>
+        <div class="container">
+            <h1>Игра: Угадай число</h1>
+            <div id="first_window">
+                <p id="congrats"></p>
+                <h2>Для начала игры нажмите кнопку</h2>
+                <button type="button" id="start_button">Начать игру</button>
+            </div>
 
-		</div>
-
-        <div id="second_window"> 
-			<p>Введите число от 1 до 100
-                <input type="text" id="enter_field">
-			</p>
-			<button id="next_try_button">Угадать</button>
-			<hr>
-			<p id="more_less_text"></p>
-            <p id="try_number_text"></p>
-            <p id="count_field"></p>
-		</div>
-		
+            <div id="second_window"> 
+                <p>Введите число от 1 до 100
+                    <input type="text" id="enter_field">
+                </p>
+                <button id="next_try_button">Угадать</button>
+                <hr>
+                <p id="more_less_text"></p>
+                <p id="try_number_text"></p>
+                <p id="count_field"></p>
+            </div>
+        </div>
         <script>
             let programNum;
             let count=0;
@@ -45,6 +105,7 @@
                 document.getElementById('enter_field').value = '';
                 programNum = Math.floor((Math.random() * 100) + 1);
                 console.log(programNum);
+                more_less_text.innerHTML = '';
             }  
             //--------------------function-----------------------
             document.getElementById('next_try_button').onclick = function() {
@@ -57,9 +118,9 @@
                 count++;
                 count_field.textContent = count;
                 if (userNum > programNum) {
-                    more_less_text.innerHTML = 'Надо меньше';
+                    more_less_text.innerHTML = 'Надо меньше!';
                 }  else if (userNum < programNum) {
-                    more_less_text.innerHTML = 'Надо больше';
+                    more_less_text.innerHTML = 'Надо больше!';
                 }  else {
                     document.getElementById("first_window").hidden=false;
                     document.getElementById("second_window").hidden=true;
