@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Guess</title>
+        <style>
+			
+		</style>
+        
+    </head>
+    
+    <body>
+        <h1>Игра: Угадай число</h1>
+		<div id="first_window">
+            <h2>Для начала игры нажмите кнопку</h2>
+            <button type="button" id="start_button">Начать игру</button>
+            <p id="congrats"></p>
+
+		</div>
+
+        <div id="second_window"> 
+			<p>Введите число от 1 до 100
+                <input type="text" id="enter_field">
+			</p>
+			<button id="next_try_button">Угадать</button>
+			<hr>
+			<p id="more_less_text"></p>
+            <p id="try_number_text"></p>
+            <p id="count_field"></p>
+		</div>
+		
+        <script>
+            let programNum;
+            let count=0;
+           
+
+            document.getElementById("second_window").hidden=true;
+            //-------------------function------------------------
+            document.getElementById('start_button').onclick = function() {
+                document.getElementById("first_window").hidden=true;
+                document.getElementById("second_window").hidden=false;
+                document.getElementById('try_number_text').textContent = 'Число попыток:';
+                document.getElementById('count_field').textContent = '0';
+                document.getElementById('enter_field').value = '';
+                programNum = Math.floor((Math.random() * 100) + 1);
+                console.log(programNum);
+            }  
+            //--------------------function-----------------------
+            document.getElementById('next_try_button').onclick = function() {
+                let userNum = 0;
+                userNum = document.getElementById('enter_field').value;
+                if (isNaN(userNum) || userNum < 1 || userNum > 100) {
+                    more_less_text.innerHTML = 'Вы не ввели число от 1 до 100';
+                    return;
+                }
+                count++;
+                count_field.textContent = count;
+                if (userNum > programNum) {
+                    more_less_text.innerHTML = 'Надо меньше';
+                }  else if (userNum < programNum) {
+                    more_less_text.innerHTML = 'Надо больше';
+                }  else {
+                    document.getElementById("first_window").hidden=false;
+                    document.getElementById("second_window").hidden=true;
+                    document.getElementById('congrats').textContent = 'Поздравляем! Вы угадали с ' + count + ' попыток!';
+                    document.getElementById('start_button').textContent = 'Начать сначала';
+                    count=0;
+                }
+            }
+
+       
+	    </script>
+    </body>
+</html>
