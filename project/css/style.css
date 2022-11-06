@@ -238,6 +238,10 @@ footer h5 {
 }
 footer a {
     color: #ccc;
+    padding-left: 10px
+}
+footer .contact_list p {
+    padding-left: 10px;
 }
 .copyright {
     font-size: small;
@@ -910,7 +914,7 @@ fieldset {
 }
 .form-control {
     display: block;
-    width: 40%;
+    width: 100%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -919,6 +923,10 @@ fieldset {
     background-color: #fff;
     background-image: none;
 }
+.mb-3 .form-control {
+    width: 40%;
+}
+
 /*.input-group btn {*/
 /*    width: 5%;*/
 /*    white-space: nowrap;*/
@@ -936,10 +944,13 @@ fieldset {
 .fa-user-o:before {
     content: "\f2c0";
 }
+.inbasket {
+    width: 40%;
+}
 .input-group {
     position: relative;
     border-collapse: separate;
-    width: 40%;
+    /*width: 100%;*/
 }
 .contact-form input, .contact-form textarea {
     border: 1px solid #e5e5e5;
