@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Главная страница</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/c12225dfc1.js" crossorigin="anonymous"></script>
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/slider.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <section class="container">
+                <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span></span></div>
+            </section>
+            <section class="container logo-form-kab">
+                <div class="sloni">
+                    <img src="images/sloni.jpg" alt="logo">
+                </div>
+                <div class="phone-operating-mode">
+                    <div class="phone">
+                        +7 (777) 777-77-77
+                    </div>
+                    <div class="operating-mode">
+                        Пн-Вс: с 9.00 до 20.00
+                    </div>
+                </div>
+                <div class="search-form">
+                    <input type="text" name="search" value="" placeholder="Поиск"
+                           class="form-control input-lg" minlength="2" autocomplete="off">
+                    <button type="button">
+                        <img src="images/Search.png">
+                    </button>
+                </div>
+            </section>
+            <section class="container">
+                <nav class="topmenu">
+                    <a href="index.html"><span>Главная страница</span></a>
+                    <a href="catalog.html"><span>Каталог</span></a>
+                    <a href="product.html"><span>Товар</span></a>
+                    <a href="order.html"><span>Корзина</span></a>
+                    <a href="contacts.html"><span>Контакты</span></a>
+                </nav>
+            </section>
+        </header>
+        
+        <main>
+            <!-- action block -->
+            <section class="action">
+                <div class="container">
+                    <p>
+                        АКЦИЯ!<br>
+                        СКИДКА НА ВСЁ 70%!!!
+                    </p>
+                    <p>
+                        До окончания осталось:
+                        <span class="actiontimer" data-actionend="2022-11-10T12:00:00">&nbsp;</span>
+                    </p>
+                </div>
+            </section>
+            <!-- /action block -->
+            <!-- slider block -->
+            <section class="slider" id="slider1">
+                <div class="slider_desk">
+                    <div class="slider_block">
+                        <img src="images/furniture1.jpg" alt="pic 1">
+                    </div>
+                    
+                    <div class="slider_block">
+                        <img src="images/furniture2.jpg" alt="pic 2">
+                    </div>
+                    
+                    <div class="slider_block">
+                        <img src="images/furniture3.jpg" alt="pic 3">
+                    </div>
+                </div>
+                
+                <button type="button" class="to_left icon"></button>
+                
+                <button type="button" class="to_right icon"></button>
+                
+                <div class="slider_points"></div>
+            </section>
+            <!-- /slider block -->
+            <!-- slider block -->
+<!--            <section class="slider" id="slider2">-->
+<!--                <div class="slider_desk">-->
+<!--                    <div class="slider_block" style="background:red">-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                    </div>-->
+<!--                    -->
+<!--                    <div class="slider_block" style="background:green">-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                    </div>-->
+<!--                    -->
+<!--                    <div class="slider_block" style="background:blue">-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                        <p>Some text without pictures.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+                
+                <button type="button" class="to_left icon"></button>
+                
+                <button type="button" class="to_right icon"></button>
+                
+                <div class="slider_points"></div>
+            </section>
+            <!-- /slider block -->
+            <div class="container advantages">
+                <div class="pay">
+                    <div>
+                        <img src="images/adv1.png">
+                    </div>
+                    <div class="text_content">
+                        <h3>Удобная оплата</h3>
+                       <p> Наличными при получении заказа. Безналичный расчет.</p>
+                    </div>
+                </div>
+                <div class="ecology">
+                    <div>
+                        <img src="images/adv2.png">
+                    </div>
+                    <div class="text_content">
+                        <h3>Экологичность</h3>
+                        <p>Все материалы высокого качества и экологически чисты</p>
+                    </div>
+                </div>
+                <div class="garanty">
+                    <div>
+                        <img src="images/adv3.png">
+                    </div>
+                    <div class="text_content">
+                        <h3>Гарантия производителя</h3>
+                        <p>12 месяцев официальной гарантии от производителя</p>
+                    </div>
+                </div>
+                <div class="return_products">
+                    <div>
+                        <img src="images/adv4.png">
+                    </div>
+                    <div class="text_content">
+                        <h3>Возврат 14 дней</h3>
+                        <p>Обмен/возврат товара в течение 14 дней</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <section class="container">
+                <div class="footer_menu">
+                    <div class="logo_footer">
+                        <img src="images/sloni_white.png" alt="logo white">
+                        <p>Мы рады приветствовать Вас в компании «Белый Слон plus» .
+                            Мы делаем практичную мебель для оснащения детских и подростковых комнат,
+                            спален, гостиных и кабинетов, а также офисных помещений. </p>
+                    </div>
+                    <div class="footer_contacts">
+                        <h5>Наши контакты</h5>
+                        <ul class="contact_list">
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:+77777777"> +7 777 77 77 </a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto:info@b-slo.ru"> info@b-slo.ru</a></li>
+                            <li><i class="fa fa-clock-o"></i> Пн-Вс: с 9.00 до 20.00 ежедневно</li>
+                            <li><i class="fa fa-map-marker"></i> Московская область, Солнечногорский район, д. Жуково, микр. Берёзки, промзона № 1, помещение № 24</li>
+                        </ul>
+                    </div>
+                    <div class="footer_information">
+                        <h5>Информация</h5>
+                        <ul>
+                            <li>Подъем и сборка</li>
+                            <li>О нас</li>
+                            <li>Доставка</li>
+                            <li>Политика Безопасности</li>
+                            <li>Условия соглашения</li>
+                            <li>Реквизиты</li>
+                            <li>Контакты</li>
+                            <li>Отзывы о сайте</li>
+                            <li>Карта сайта</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="container copyright">Официальный магазин детской мебели - b-slo.ru © 2022</section>
+        </footer>
+    </body>
+</html>
