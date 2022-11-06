@@ -9,7 +9,7 @@
         
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
-        
+        <script src="https://kit.fontawesome.com/c12225dfc1.js" crossorigin="anonymous"></script>
         <script defer src="js/jquery-3.6.1.min.js"></script>
         <script defer src="js/jquery-ui.min.js"></script>
         <script defer src="js/gallery.js"></script>
@@ -22,7 +22,26 @@
             <section class="container">
                 <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span></span></div>
             </section>
-            <section class="container">Здесь должны быть лого, форма поиска, входы в личный кабинет и корзину</section>
+            <section class="container logo-form-kab">
+                <div class="sloni">
+                    <img src="images/sloni.jpg" alt="logo">
+                </div>
+                <div class="phone-operating-mode">
+                    <div class="phone">
+                        +7 (777) 777-77-77
+                    </div>
+                    <div class="operating-mode">
+                        Пн-Вс: с 9.00 до 20.00
+                    </div>
+                </div>
+                <div class="search-form">
+                    <input type="text" name="search" value="" placeholder="Поиск"
+                           class="form-control input-lg" minlength="2" autocomplete="off">
+                    <button type="button">
+                        <img src="images/Search.png">
+                    </button>
+                </div>
+            </section>
             <section class="container">
                 <nav class="topmenu">
                     <a href="index.html"><span>Главная страница</span></a>
@@ -65,27 +84,15 @@
                 <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product">
                     <div class="images">
                         <div class="bigimage">
-                            <img src="images/zver.jpg" alt="капибара" itemprop="image">
+                            <img src="images/stairs1-1.jpg" alt="*" itemprop="image">
                         </div>
                         
                         <div class="gallery">
                             <div>
                                 <div class="rail">
-                                    <img src="images/mini_zver.jpg" alt="капибара" itemprop="image">
-                                    <img src="images/mini_pelmen.jpg" alt="пельмень" itemprop="image">
-                                    <img src="images/mini_doshik.jpg" alt="дошик" itemprop="image">
-                                    <img src="images/mini_kniga.jpg" alt="книга" itemprop="image">
-                                    <img src="images/mini_misha.jpg" alt="медвед" itemprop="image">
-                                    <img src="images/mini_zver.jpg" alt="капибара">
-                                    <img src="images/mini_pelmen.jpg" alt="пельмень">
-                                    <img src="images/mini_doshik.jpg" alt="дошик">
-                                    <img src="images/mini_kniga.jpg" alt="книга">
-                                    <img src="images/mini_misha.jpg" alt="медвед">
-                                    <img src="images/mini_zver.jpg" alt="капибара">
-                                    <img src="images/mini_pelmen.jpg" alt="пельмень">
-                                    <img src="images/mini_doshik.jpg" alt="дошик">
-                                    <img src="images/mini_kniga.jpg" alt="книга">
-                                    <img src="images/mini_misha.jpg" alt="медвед">
+                                    <img src="images/stairs1-1.jpg" alt="*" itemprop="image">
+                                    <img src="images/stairs1-2.jpg" alt="*" itemprop="image">
+                                    <img src="images/stairs1=3.jpg" alt="*" itemprop="image">
                                 </div>
                             </div>
                             <button type="button" class="gal_left disabled"><span>&#8249;</span></button>
@@ -94,27 +101,61 @@
                     </div>
                     
                     <div class="offer">
-                        <h1 itemprop="name">Продаваемый товар</h1>
+                        <h1 itemprop="name">Лестница-комод Golden Kids (Венге)</h1>
                         <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price">1000</span>
+                            <span itemprop="price">11800</span>
                             <meta itemprop="priceCurrency" content="RUB">
                         </p>
                         <button type="button" class="btn btn-danger btn-buy">КУПИТЬ</button>
-                        <p itemprop="description">Характеристики товара очень хорошие</p>
-                        <p>Характеристики товара очень хорошие</p>
-                        <p>Характеристики товара очень хорошие</p>
-                        <p>Характеристики товара очень хорошие</p>
-                        <p>Характеристики товара очень хорошие</p>
-                        <p>Характеристики товара очень хорошие</p>
-                        <p>Характеристики товара очень хорошие</p>
+                        <p itemprop="description"><b>Характеристики товара:</b></p>
+                        <p>Удобная и вместительная лестница комод имеет три выдвижных ящика глубиной 30 см, что позволяет разместить большое количество вещей.
+                          </p>
+                        <p>Этот дополнительный элемент в детскую подходит к множеству комплексов мебели Golden Kids, а также может быть самостоятельным как игровой элемент с полезной зоной хранения вещей.</p>
+                        <p>Модные цвета корпуса и фасадов создадут в комнате атмосферу современности, одновременно поддерживая ощущение уюта.</p>
+                        <p>Вариации цвета корпуса: венге, дуб вотан, дуб молочный.</p>
+                        <p>Вариации цвета фасадов: дуб молочный, венге, розовый, бежевый, голубой, зеленый, дуб вотан.</p>
+                        <p>Гарантия 12 месяцев.</p>
                     </div>
                 </div>
             </section>
         </main>
         
         <footer>
-            <section class="container">Меню столбиками</section>
-            <section class="container">Строка копирайта</section>
+            <section class="container">
+                <div class="footer_menu">
+                    <div class="logo_footer">
+                        <img src="images/sloni_white.png" alt="logo white">
+                        <p>Мы рады приветствовать Вас в компании «Белый Слон plus» .
+                            Мы делаем практичную мебель для оснащения детских и подростковых комнат,
+                            спален, гостиных и кабинетов, а также офисных помещений. </p>
+                    </div>
+                    <div class="footer_contacts">
+                        <h5>Наши контакты</h5>
+                        <ul class="contact_list">
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:+77777777"> +7 777 77 77 </a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto:info@b-slo.ru"> info@b-slo.ru</a></li>
+                            <li><i class="fa fa-clock-o"></i> Пн-Вс: с 9.00 до 20.00 ежедневно</li>
+                            <li><i class="fa fa-map-marker"></i> Московская область, Солнечногорский район, д. Жуково, микр. Берёзки, промзона № 1, помещение № 24</li>
+                        </ul>
+                    </div>
+                    <div class="footer_information">
+                        <h5>Информация</h5>
+                        <ul>
+                            <li>Подъем и сборка</li>
+                            <li>О нас</li>
+                            <li>Доставка</li>
+                            <li>Политика Безопасности</li>
+                            <li>Условия соглашения</li>
+                            <li>Реквизиты</li>
+                            <li>Контакты</li>
+                            <li>Отзывы о сайте</li>
+                            <li>Карта сайта</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="container copyright">Официальный магазин детской мебели - b-slo.ru © 2022</section>
         </footer>
     </body>
 </html>

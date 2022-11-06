@@ -170,7 +170,7 @@ body {
 }
 header {
     flex: none;
-    background: linear-gradient(to left, powderblue, #FFFFFF);
+    background: linear-gradient(to left, #6469d333, #FFFFFF);
     color: #6469d3;
 }
 main {
@@ -178,7 +178,7 @@ main {
 }
 footer {
     flex: none;
-    background: rgb(108,117,125);
+    background:#5057bd;
     color: #fff;
 }
 .logo_footer p{
@@ -373,7 +373,7 @@ footer a {
     border: 1px solid #dfdfdf;
     border-radius: 4px;
     margin: auto 0;
-    width: 300px;
+    width: 35%;
 }
 .search-form input {
     height: 40px;
@@ -519,12 +519,13 @@ footer a {
 .advantages div p {
     margin-top: 10px;
     opacity: 0.8;
+    font-size: 18px;
 }
+
 /* catalog */
 .catalog .container {
     display: flex;
     gap: 20px;
-    margin-top: 10px;
     margin-bottom: 30px;
 }
 .catalog aside {
@@ -634,6 +635,9 @@ footer a {
     padding: 10px 0;
     height: 20px;
 }
+.breadcrumbs a {
+    color: #0d6efd;
+}
 .breadcrumbs li {
     display: inline-block;
     vertical-align: top;
@@ -666,12 +670,20 @@ footer a {
 }
 .bigimage {
     width: 450px;
-    /*height: 550px;*/
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
+    height: 550px;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
     border: 1px solid blue;
     padding: 9px;
+    background-color: #FFFFFF;
+}
+.offer p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #666;
+    padding: 10px;
 }
 .gallery {
     width: 440px;
@@ -722,6 +734,13 @@ footer a {
     top: 0;
     left: 0;
     height: 50px;
+}
+.product {
+    margin-bottom: 30px;
+}
+.container-breadcr {
+    width: auto;
+    margin: 0 40px;
 }
 .product .price {
     color: red;
@@ -845,8 +864,8 @@ footer a {
     font-size: 13px;
     text-align: center;
     color: #fff;
-    background-color: #2abcd4;
-    border: 2px solid #2abcd4;
+    background-color: #6469d3;
+    border: 2px solid #6469d3;
     border-radius: 50%;
     display: inline-block;
 }
@@ -891,7 +910,7 @@ fieldset {
 }
 .form-control {
     display: block;
-    width: 100%;
+    width: 40%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -900,10 +919,16 @@ fieldset {
     background-color: #fff;
     background-image: none;
 }
-.input-group-btn {
-    width: 5%;
-    white-space: nowrap;
-    vertical-align: middle;
+/*.input-group btn {*/
+/*    width: 5%;*/
+/*    white-space: nowrap;*/
+/*    vertical-align: middle;*/
+/*}*/
+.form-group .btn {
+    cursor: pointer;
+}
+.form-group .btn:hover {
+    background-color: #0b5ed7;
 }
 .input-group .form-control, .input-group-btn {
     display: table-cell;
@@ -914,6 +939,7 @@ fieldset {
 .input-group {
     position: relative;
     border-collapse: separate;
+    width: 40%;
 }
 .contact-form input, .contact-form textarea {
     border: 1px solid #e5e5e5;

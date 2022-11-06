@@ -9,7 +9,7 @@
         
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
-        
+        <script src="https://kit.fontawesome.com/c12225dfc1.js" crossorigin="anonymous"></script>
         <script defer src="js/jquery-3.6.1.min.js"></script>
         <script defer src="js/jquery-ui.min.js"></script>
         <script defer src="js/slider.js"></script>
@@ -22,7 +22,26 @@
             <section class="container">
                 <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span></span></div>
             </section>
-            <section class="container">Здесь должны быть лого, форма поиска, входы в личный кабинет и корзину</section>
+            <section class="container logo-form-kab">
+                <div class="sloni">
+                    <img src="images/sloni.jpg" alt="logo">
+                </div>
+                <div class="phone-operating-mode">
+                    <div class="phone">
+                        +7 (777) 777-77-77
+                    </div>
+                    <div class="operating-mode">
+                        Пн-Вс: с 9.00 до 20.00
+                    </div>
+                </div>
+                <div class="search-form">
+                    <input type="text" name="search" value="" placeholder="Поиск"
+                           class="form-control input-lg" minlength="2" autocomplete="off">
+                    <button type="button">
+                        <img src="images/Search.png">
+                    </button>
+                </div>
+            </section>
             <section class="container">
                 <nav class="topmenu">
                     <a href="index.html"><span>Главная страница</span></a>
@@ -35,6 +54,23 @@
         </header>
         
         <main class="order">
+            <section class="container">
+                <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="index.html">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                        <link itemprop="url" href="index.html">
+                    </li>
+
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Корзина</span>
+                        <meta itemprop="position" content="3">
+                        <link itemprop="url" href="product.html">
+                    </li>
+                </ul>
+            </section>
             <section class="container">
                 <table class="table table-striped">
                     <thead>
@@ -106,8 +142,41 @@
         </main>
         
         <footer>
-            <section class="container">Меню столбиками</section>
-            <section class="container">Строка копирайта</section>
+            <section class="container">
+                <div class="footer_menu">
+                    <div class="logo_footer">
+                        <img src="images/sloni_white.png" alt="logo white">
+                        <p>Мы рады приветствовать Вас в компании «Белый Слон plus» .
+                            Мы делаем практичную мебель для оснащения детских и подростковых комнат,
+                            спален, гостиных и кабинетов, а также офисных помещений. </p>
+                    </div>
+                    <div class="footer_contacts">
+                        <h5>Наши контакты</h5>
+                        <ul class="contact_list">
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:+77777777"> +7 777 77 77 </a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto:info@b-slo.ru"> info@b-slo.ru</a></li>
+                            <li><i class="fa fa-clock-o"></i> Пн-Вс: с 9.00 до 20.00 ежедневно</li>
+                            <li><i class="fa fa-map-marker"></i> Московская область, Солнечногорский район, д. Жуково, микр. Берёзки, промзона № 1, помещение № 24</li>
+                        </ul>
+                    </div>
+                    <div class="footer_information">
+                        <h5>Информация</h5>
+                        <ul>
+                            <li>Подъем и сборка</li>
+                            <li>О нас</li>
+                            <li>Доставка</li>
+                            <li>Политика Безопасности</li>
+                            <li>Условия соглашения</li>
+                            <li>Реквизиты</li>
+                            <li>Контакты</li>
+                            <li>Отзывы о сайте</li>
+                            <li>Карта сайта</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="container copyright">Официальный магазин детской мебели - b-slo.ru © 2022</section>
         </footer>
     </body>
 </html>

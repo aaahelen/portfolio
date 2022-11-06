@@ -2,12 +2,13 @@
 let citylist = ['Москва', 'Немосква', 'Караганда', 'Магадан', 'Люберцы', 'Севастополь', 'Ярославль', 'Вологда', 'Владивосток', 'Барнаул', 'Петрозаводск', 'Самара', 'Саратов', 'Тверь', 'Вашингтон', 'Париж', 'Пермь', 'Екатеринбург', 'Новосибирск', 'Калининград'];
 let rangemin = 0;
 let rangemax = 300;
+
 let startbasket = [
     {
         id: 1,
-        name: 'ZHABA',
-        price: 2000,
-        quantity: 100,
+        name: 'Шкаф',
+        price: 800,
+        quantity: 1,
         link: ''
     },
     {
@@ -250,7 +251,7 @@ $(function(){
     }
     
     $('.btn-buy').click(function(){
-        let res = {}
+        let res = {};
         let aim = $(this).parents('.product');
         res.id = aim.data('product-id');
         res.name = aim.find('h1').html();
