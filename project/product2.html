@@ -5,17 +5,16 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Корзина</title>
+        <title>Карточка товара</title>
         
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
-
+        <script src="https://kit.fontawesome.com/c12225dfc1.js" crossorigin="anonymous"></script>
         <script defer src="js/jquery-3.6.1.min.js"></script>
         <script defer src="js/jquery-ui.min.js"></script>
-        <script defer src="js/slider.js"></script>
-        <script defer src="js/datepicker.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
         <script defer src="js/main.js"></script>
-        <script src="https://kit.fontawesome.com/c12225dfc1.js" crossorigin="anonymous"></script>
     </head>
     
     <body>
@@ -47,13 +46,14 @@
                 <nav class="topmenu">
                     <a href="index.html"><span>Главная страница</span></a>
                     <a href="catalog.html"><span>Каталог</span></a>
+                    <a href="product.html"><span>Товар</span></a>
                     <a href="order.html"><span>Корзина</span></a>
                     <a href="contacts.html"><span>Контакты</span></a>
                 </nav>
             </section>
         </header>
         
-        <main class="order">
+        <main>
             <section class="container">
                 <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -63,81 +63,60 @@
                         <meta itemprop="position" content="1">
                         <link itemprop="url" href="index.html">
                     </li>
-
+                    
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name">Корзина</span>
+                        <a href="catalog.html">
+                            <span itemprop="name">Каталог</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                        <link itemprop="url" href="catalog.html">
+                    </li>
+                    
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Товар</span>
                         <meta itemprop="position" content="3">
                         <link itemprop="url" href="product.html">
                     </li>
                 </ul>
             </section>
-            <section class="container">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="index">#</th>
-                            <th scope="col" class="name">Название</th>
-                            <th scope="col" class="qty">Количество</th>
-                            <th scope="col" class="price">Цена</th>
-                            <th scope="col" class="sum">Сумма</th>
-                            <th scope="col" class="delete">Удалить</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- список товаров генерим на лету -->
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                        <th scope="col" class="index"></th>
-                        <th scope="col" class="allsum" colspan="5">
-                            Итого:
-                            <span></span>
-                        </th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
             
             <section class="container">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Ваше имя</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                <div class="product" data-product-id="22222" itemscope itemtype="https://schema.org/Product">
+                    <div class="images">
+                        <div class="bigimage">
+                            <img src="images/bad2.jpg" alt="*" itemprop="image">
+                        </div>
+                        
+                        <div class="gallery">
+                            <div>
+                                <div class="rail">
+                                    <img src="images/bad2.jpg" alt="*" itemprop="image">
+                                    <img src="images/bad2.jpg" alt="*" itemprop="image">
+                                    <img src="images/bad2.jpg" alt="*" itemprop="image">
+                                </div>
+                            </div>
+                            <button type="button" class="gal_left disabled"><span>&#8249;</span></button>
+                            <button type="button" class="gal_right"><span>&#8250;</span></button>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="mail" class="form-label">Ваша почта</label>
-                        <input type="text" class="form-control" id="mail" name="mail">
+                    
+                    <div class="offer">
+                        <h1 itemprop="name">Двухъярусная кровать Golden Kids 6 (Вотан)</h1>
+                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="price">13500</span>
+                            <meta itemprop="priceCurrency" content="RUB">
+                        </p>
+                        <button type="button" class="btn btn-danger btn-buy">КУПИТЬ</button>
+                        <p itemprop="description"><b>Характеристики товара:</b></p>
+                        <p>Великолепная новинка модельного ряда детская кровать-чердак Golden Kids 6 стильная, современная и функциональная кровать
+                            для детей позволяет разместить большое количество вещей и организовать рабочее место.
+                        </p>
+                        <p> Размер спального места 80х190 см. Рекомендуемая высота матраса от 10 до 19 см. </p>
+                        <p>Матрас в комплектацию не входит. В комплект кровати входит удобная лестница-комод - 3 (три) выдвижных ящика глубиной 30 см, угловой шкаф для одежды 83,4х82,6х(40х41,6)х150,3 (внутри с одной стороны 3 (три) полки 32х32 см, с другой стороны - хромированная штанга 83 см).</p>
+                        <p> Размеры стола - длина - 79 см, ширина - 100 см в широкой части, 38,4 см - в узкой. Модель универсальная - лестницу-комод и стол можно устанавливать как с левой, так и правой стороны. Вариации цвета  корпуса: венге, дуб вотан, дуб молочный, белый.</p>
+                        <p>Гарантия 12 месяцев.</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Ваш телефон</label>
-                        <input type="text" class="form-control" id="phone" name="phone">
-                    </div>
-                    <div class="mb-3">
-                        <label for="addr" class="form-label">Ваш адрес</label>
-                        <input type="text" class="form-control" id="addr" name="addr">
-                    </div>
-                    <label for="date" class="form-label">Желаемая дата доставки</label>
-                    <div class="input-group mb-3 inbasket">
-                        <input type="text" class="form-control" id="date" name="date" readonly>
-                        <button class="btn btn-outline-secondary icon" type="button">&#xe907;</button>
-                    </div>
-                    <div class="mb-3">
-                        <label for="comm" class="form-label">Комментарий</label>
-                        <textarea class="form-control" id="comm" name="comm" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="agree" name="agree" checked>
-                        <label class="form-check-label" for="agree">Согласен на обработку моих персональных данных</label>
-                    </div>
-                    <div class="mb-3">
-                        <button type="button" class="btn btn-primary submit">Оформить заказ</button>
-                    </div>
-                </form>
-            </section>
-            
-            <section class="container empty">
-                <h1>Ваша корзина пуста</h1>
-                <p>Выберите товары в каталоге</p>
+                </div>
             </section>
         </main>
         

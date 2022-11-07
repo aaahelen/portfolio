@@ -1,7 +1,7 @@
 /* variables */
-let citylist = ['Москва', 'Немосква', 'Караганда', 'Магадан', 'Люберцы', 'Севастополь', 'Ярославль', 'Вологда', 'Владивосток', 'Барнаул', 'Петрозаводск', 'Самара', 'Саратов', 'Тверь', 'Вашингтон', 'Париж', 'Пермь', 'Екатеринбург', 'Новосибирск', 'Калининград'];
+let citylist = ['Москва', 'Тула', 'Караганда', 'Магадан', 'Люберцы', 'Севастополь', 'Ярославль', 'Вологда', 'Владивосток', 'Барнаул', 'Петрозаводск', 'Самара', 'Саратов', 'Тверь', 'Вашингтон', 'Париж', 'Пермь', 'Екатеринбург', 'Новосибирск', 'Калининград'];
 let rangemin = 0;
-let rangemax = 300;
+let rangemax = 50000;
 // let startbasket = [
 //     {
 //         id: 1,
@@ -261,23 +261,23 @@ $(function(){
         /*
         вариант с флагом
         */
-        if (basket) {
-            let flag = false;
-            for (let item of basket) {
-                if (item.id == res.id) {
-                    item.quantity = +item.quantity + +res.quantity;
-                    flag = true;
-                    break;
-                }
-            }
-            if (!flag) basket.push(res);
-        } else {
-            basket = [res];
-        }
-        localStorage.setItem('basket', JSON.stringify(basket));
-        /*
-        вариант без флага
-        
+        // if (basket) {
+        //     let flag = false;
+        //     for (let item of basket) {
+        //         if (item.id == res.id) {
+        //             item.quantity = +item.quantity + +res.quantity;
+        //             flag = true;
+        //             break;
+        //         }
+        //     }
+        //     if (!flag) basket.push(res);
+        // } else {
+        //     basket = [res];
+        // }
+        // localStorage.setItem('basket', JSON.stringify(basket));
+
+        // вариант без флага
+
         if (!basket) basket = [];
         for (let item of basket) {
             if (item.id == res.id) {
@@ -288,15 +288,16 @@ $(function(){
         }
         basket.push(res);
         localStorage.setItem('basket', JSON.stringify(basket));
-        */
+
     });
     
     if ('.order') {
         let point = $('.table tbody');
         let count = 1;
         let basket = JSON.parse(localStorage.getItem('basket'));
+
         if (!basket) basket = [];
-        basket.push(...basket);
+        // basket.push(...basket);
         for (let item of basket) {
             let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" ' +
                 'class="index">'+count+'</th><td class="name"><a href="'+item.link+'">' +
@@ -364,7 +365,7 @@ $(function(){
                         'Content-type': 'application/json; charset=UTF-8',
                     },
                 }).then((response) => response.json()).then(function(json){
-                    localStorage.removeItem('basket')
+                    localStorage.removeItem('basket');
                     getModalWindow('order');
                     $('.modal').append('<p>Ваш заказ оформлен под номером ' + json.id + '.</p>');
                     $('.order').addClass('empty');
