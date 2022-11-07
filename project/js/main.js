@@ -2,30 +2,29 @@
 let citylist = ['Москва', 'Немосква', 'Караганда', 'Магадан', 'Люберцы', 'Севастополь', 'Ярославль', 'Вологда', 'Владивосток', 'Барнаул', 'Петрозаводск', 'Самара', 'Саратов', 'Тверь', 'Вашингтон', 'Париж', 'Пермь', 'Екатеринбург', 'Новосибирск', 'Калининград'];
 let rangemin = 0;
 let rangemax = 300;
-
-let startbasket = [
-    {
-        id: 1,
-        name: 'Шкаф',
-        price: 800,
-        quantity: 1,
-        link: ''
-    },
-    {
-        id: 2,
-        name: 'GADIUKA',
-        price: 3000,
-        quantity: 10,
-        link: ''
-    },
-    {
-        id: 111,
-        name: 'Cangaroo',
-        price: 15500,
-        quantity: 1,
-        link: ''
-    }
-];
+// let startbasket = [
+//     {
+//         id: 1,
+//         name: 'ZHABA',
+//         price: 2000,
+//         quantity: 100,
+//         link: ''
+//     },
+//     {
+//         id: 2,
+//         name: 'GADIUKA',
+//         price: 3000,
+//         quantity: 10,
+//         link: ''
+//     },
+//     {
+//         id: 111,
+//         name: 'Cangaroo',
+//         price: 15500,
+//         quantity: 1,
+//         link: ''
+//     }
+// ];
 
 /* functions */
 function getModalWindow(idname) {
@@ -251,7 +250,7 @@ $(function(){
     }
     
     $('.btn-buy').click(function(){
-        let res = {};
+        let res = {}
         let aim = $(this).parents('.product');
         res.id = aim.data('product-id');
         res.name = aim.find('h1').html();
@@ -297,9 +296,14 @@ $(function(){
         let count = 1;
         let basket = JSON.parse(localStorage.getItem('basket'));
         if (!basket) basket = [];
-        basket.push(...startbasket);
+        basket.push(...basket);
         for (let item of basket) {
-            let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name"><a href="'+item.link+'">'+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span><strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td><td class="price">'+item.price+'</td><td class="sum"></td><td class="delete icon">&#xe906;</td></tr>';
+            let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" ' +
+                'class="index">'+count+'</th><td class="name"><a href="'+item.link+'">' +
+                ''+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span>' +
+                '<strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td>' +
+                '<td class="price">'+item.price+'</td><td class="sum"></td>' +
+                '<td class="delete icon">&#xe906;</td></tr>';
             point.append(hlpstr);
             count++;
         }
