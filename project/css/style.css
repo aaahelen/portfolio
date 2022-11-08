@@ -379,6 +379,7 @@ footer .contact_list p {
     border-radius: 4px;
     margin: auto 0;
     width: 35%;
+    height: 40px;
 }
 .search-form input {
     height: 40px;
@@ -388,6 +389,10 @@ footer .contact_list p {
     background-color: transparent;
     border: none;
     box-shadow: none;
+}
+.search-form button img {
+    height: 40px;
+    width: 40px;
 }
 /* action */
 .action {
@@ -1047,7 +1052,71 @@ textarea.form-control {
         padding: 10px;
         line-height: 25px;
     }
-
+    .slider {
+        width: 702px;
+        height: 402px;
+    }
+    .slider_desk {
+        width: 700px;
+        height: 400px;
+    }
+    .catalog aside {
+        height: fit-content;
+        flex: 0 0 260px;
+    }
+    .cat-item {
+        height: 260px;
+        width: 130px;
+    }
+    .filters input {
+        width: 25%;
+        font-size: 12px;
+    }
+    .filters .btn {
+        width: fit-content;
+    }
+    h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .product {
+        gap: 20px;
+    }
+    .offer {
+        height: fit-content;
+    }
+    .offer p {
+        font-size: 14px;
+        line-height: 15px;
+        padding: 5px;
+    }
+    .product .price {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .images {
+        flex: 0 0 370px;
+    }
+    .bigimage {
+        width: 350px;
+        height: 450px;
+    }
+    .gallery {
+        width: 340px;
+    }
+    .cat-item img {
+        width: 130px;
+    }
+    .search-form {
+        height: 35px;
+    }
+    .search-form input {
+        height: 35px;
+    }
+    .search-form button img {
+        height: 35px;
+        width: 35px;
+    }
 }
 
 
